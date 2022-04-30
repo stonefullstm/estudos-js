@@ -21,6 +21,17 @@ Saída:
 
 function fibonnaci(n){
   // Desenvolva seu código nessa função
+  if (n === 1 || n === 2) {
+    return 1;
+  }
+  let n1 = 1;
+  let n2 = 1;
+
+  for (let i = 3; i <= n; i++) {
+      n2 = n1 + n2;
+      n1 = n2 - n1;
+  }
+  return n2;
 }
 
 module.exports = fibonnaci;
