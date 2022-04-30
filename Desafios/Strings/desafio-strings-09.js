@@ -43,3 +43,4 @@ function encodeMessage(string) {
 }
 
 module.exports = encodeMessage;
+
