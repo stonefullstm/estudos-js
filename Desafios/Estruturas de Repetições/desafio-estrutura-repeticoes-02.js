@@ -16,8 +16,8 @@ Considerando a mesma lógica, escreva um algoritmo que irá somar todos números
 
 function accumulator(limit){
   // Desenvolva seu código nessa função
-  soma = 0;
-  for (let i = 1; i <= limit) {
+  let soma = 0;
+  for (let i = 1; i <= limit; i++) {
 	soma += i;
   }
 }
