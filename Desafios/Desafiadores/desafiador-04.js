@@ -67,7 +67,7 @@ function musicalNotes2(notes){
       j++;
     }
     return degrees;
-
+  }
 }
 
 module.exports = musicalNotes2;

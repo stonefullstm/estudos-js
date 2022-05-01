@@ -31,7 +31,18 @@ Saída:
 
 function productAnalysis(products){ // corrigir nome
   // Desenvolva seu código nessa função
+  let maior = products[0].price;
+  let nome = products[0].name;
+  let soma = products[0].price;
+  for (let i = 1; i < products.length; i++) {
+    if (products[i].price > maior) {
+      maior = products[i].price;
+      nome = products[i].name;
+    }
+    soma += products[i].price;
+  }
+  let media = soma / products.length;
+  return `O produto mais caro é ${nome} e custa: R$ ${maior}, a média de preços dos produtos é de: R$ ${media.toFixed(2)}.`
 }
 
 module.exports = productAnalysis;
-

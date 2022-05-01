@@ -35,6 +35,9 @@ Caso a pessoa não se enquadre nessas categorias acima, retorne:
 
 function viewerTvShows(dataViewer){
   // Desenvolva seu código nessa função
+  if (dataViewer[idade] >= 16 && dataViewer[pais] == "Brasil" && dataViewer[esportes]) {
+    return "UFC"
+  } 
 }
 
 module.exports = viewerTvShows;

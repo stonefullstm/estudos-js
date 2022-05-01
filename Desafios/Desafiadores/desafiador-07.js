@@ -17,6 +17,12 @@ Saída:
 
 function averageTemperature(anualRegister){
   // Desenvolva seu código nessa função
+  let soma = 0;
+  for (let i = 0; i < anualRegister.length; i++) {
+    soma += anualRegister[i];
+  }
+  let media = ((soma / anualRegister.length) - 32) / 1.8;
+  return `A média anual de temperatura em graus Celsius é ${media.toFixed(2)}.`;
 }
 
 module.exports = averageTemperature;

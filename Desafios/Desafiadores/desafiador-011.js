@@ -44,6 +44,54 @@ Saída:
 
 function musicalNotes3(notes){
   // Desenvolva seu código nessa função
+  let escala = [
+    {
+      note: "Dó",
+      degree: "I"
+    },
+    {
+      note: "Ré",
+      degree: "II"
+    },
+    {
+      note: "Mi",
+      degree: "III"
+    },
+    {
+      note: "Fá",
+      degree: "IV"
+    },
+    {
+      note: "Sol",
+      degree: "V"
+    },
+    {
+      note: "Lá",
+      degree: "VI"
+    },
+    {
+      note: "Si",
+      degree: "VII"
+    }
+
+  ]
+  let degrees = [];
+  for (let i = 0; i < notes.length; i++) {
+    let j = 0;
+    let achou = false;
+    let triad = [];
+    while (j < escala.length && !achou) {
+      if (escala[j].note === notes[i]) {
+        triad.push(escala[j].note);
+        triad.push(escala[(j+2) % 7].note);
+        triad.push(escala[(j+4) % 7].note);
+
+        degrees.push({degree: escala[j].degree, triad: triad});
+      }
+      j++;
+    }
+  }
+  return degrees;
 }
 
 module.exports = musicalNotes3;
