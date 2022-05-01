@@ -24,21 +24,15 @@ Saída:
 
 function musicalNotes(notes) {
   // Desenvolva seu código nessa função
-  let notas = ['Dó', 'Ré', 'Mi', 'Fá', 'Sol', 'Lá', 'Si'];
-  let graus = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
+  let notas = {Dó: "I", Ré: "II", Mi: "III", Fá: "IV", Sol: "V", Lá: "VI", Si: "VIII"};
   let degrees = [];
   for (let i = 0; i < notes.length; i++) {
-    let achou = false;
-    let j = 0;
-    while (j < notas.length && !achou) {
-      if (notes[i] === notas[j]) {
-        achou = true;
-        degrees.push(graus[j]);
-      }
-      j++;
-    }
-    return degrees;
-  } 
+    let nota = notes[i];
+    let grau = notas[nota];
+    degrees.push(grau);
+  }
+  return degrees;
+   
 }
 
 module.exports = musicalNotes;
