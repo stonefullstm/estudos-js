@@ -17,12 +17,6 @@ Saída:
 
 function encode(string){
   // Desenvolva seu código nessa função
-  let saida = '';
-  for (let i = 0; i < string.length; i++) {
-    saida = saida + (i * 3).toString();
-  }
-  return saida;
 }
 
-//module.exports = encode;
-console.log(encode('Trybe'));
+module.exports = encode;
